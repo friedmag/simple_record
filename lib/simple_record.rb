@@ -1038,7 +1038,7 @@ module SimpleRecord
       return if conditions.nil?
       if conditions.size > 1
         # all after first are values
-        conditions.collect! { |x|
+        conditions.collect { |x|
           Translations.pad_and_offset(x)
         }
       end
